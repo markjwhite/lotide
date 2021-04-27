@@ -26,5 +26,5 @@ const without = (source, itemsToRemove) => {
     }
   }
   return newArr;
-}
+};
 
