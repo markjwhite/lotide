@@ -13,4 +13,4 @@ const findKeyByValue = (obj, val) => {
     }
   }
   return undefined;
-}
+};
