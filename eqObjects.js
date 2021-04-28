@@ -27,7 +27,6 @@ const eqObjects = (object1, object2) => {
   }
   for (let key of arrOfKeys1) {
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
-      console.log('hello');
       temp = eqArrays(object1[key], object2[key]);
       return temp;
     }
