@@ -18,10 +18,10 @@ const assertArraysEqual = (actual, expected) => {
   }
 };
 
-const map = (arr, callback) => {
+const takeUntil = (array, callback) => {
   const results = [];
-  for (let item of arr) {
-    results.push(callback(item));
+  for (ele of array) {
+    if (callback(ele)) return results;
+    else return results;
   }
-  return results;
 };
