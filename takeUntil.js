@@ -21,7 +21,10 @@ const assertArraysEqual = (actual, expected) => {
 const takeUntil = (array, callback) => {
   const results = [];
   for (ele of array) {
-    if (callback(ele)) return results;
-    else return results;
+    if (callback(ele)) {
+      return results;
+    } else {
+      return results;
+    }
   }
 };
