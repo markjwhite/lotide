@@ -1,15 +1,7 @@
-const flatten = (arr) => {
-  let flattened = [];
-  for (let ele of arr) {
-    if (Array.isArray(ele)) {
-      for (let item of ele) {
-        flattened.push(item);
-      }
-    } else {
-      flattened.push(ele);
-    }
-  }
-  return flattened;
+const flatten = arr => {
+  return arr.reduce((acc, curr) => {
+    return acc.concat(Array.isArray(curr) ? flatten(curr) : curr);
+  }, []);
 };
 
 module.exports = flatten;

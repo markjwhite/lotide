@@ -1,9 +1,14 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const eqArrays = require('../eqArrays');
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-assertEqual(eqArrays([1, 2, 3, 4], [1, 2, 3]), true); // => should FAIL
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), false); // => should FAIL
-assertEqual(eqArrays([1, 2, 4], [1, 2, 3]), true); // => should FAIL
-assertEqual(eqArrays([1, 2, 3], [1, 'hello', 3]), true); // => should FAIL
-assertEqual(eqArrays([1, 2, 3], [1, 'hello', 3]), false); // => should PASS
+describe("#eqArrays", () => {
+  it("should return true if arrays are the same", () => {
+    assert.deepEqual(eqArrays(["a", "b", "c"], ["a", "b", "c"]), true);
+  });
+  it("should return false if data types are different", () => {
+    assert.deepEqual(eqArrays([1, 2, 3], ["1", "2", "3"]), false);
+  });
+  it("should return false if arrays are different lengths", () => {
+    assert.deepEqual(eqArrays(["a", "b", "c"], ["a", "b", "c", "d"]), false);
+  });
+});
