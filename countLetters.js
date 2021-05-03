@@ -1,11 +1,3 @@
-const assertEqual = (actual, expected) => {
-  if (actual === expected) {
-    console.log(`✅ ✅ ✅  Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 const countLetters = (str) => {
   str = str.split(' ').join('');
   const counted = {};
@@ -18,3 +10,5 @@ const countLetters = (str) => {
   }
   return counted;
 };
+
+module.exports = countLetters;

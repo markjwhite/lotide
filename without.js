@@ -9,15 +9,6 @@ const eqArrays = (arr1, arr2) => {
   }
   return true;
 };
-
-const assertArraysEqual = (actual, expected) => {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅ ✅ ✅  Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 const without = (source, itemsToRemove) => {
   const newArr = [];
   for (let i = 0; i < source.length; i++) {
@@ -27,4 +18,6 @@ const without = (source, itemsToRemove) => {
   }
   return newArr;
 };
+
+module.exports = without;
 
