@@ -1,9 +1,8 @@
-const assertEqual = require('../assertEqual');
-const tail = require('../tail');
+const assert = require("chai").assert
+const tail = require("../tail");
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
-
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(JSON.stringify(result), JSON.stringify(["Lighthouse", "Labs"]));
+describe("#tail", () => {
+  it("should return all but the head(first element) of the array", () => {
+    assert.deepEqual(tail(["Wishing", "I", "was", "fishing"]), ["I", "was", "fishing"]);
+  });
+});
