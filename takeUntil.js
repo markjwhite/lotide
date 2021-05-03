@@ -1,6 +1,6 @@
-const takeUntil = (array, callback) => {
+const takeUntil = (arr, callback) => {
   const results = [];
-  for (ele of array) {
+  for (ele of arr) {
     if (callback(ele)) {
       return results;
     } else {
