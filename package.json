@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@markjwhite/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "mini clone of the lodash library",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,8 +13,13 @@
     "type": "git",
     "url": "git+https://github.com/markjwhite/lotide.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "lodash",
+    "lotide",
+    "lighthouse",
+    "clone"
+  ],
+  "author": "markjwhite",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/markjwhite/lotide/issues"
