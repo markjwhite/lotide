@@ -1,6 +1,5 @@
 const eqObjects = require('./eqObjects');
 
-
 const assertObjectsEqual = (actual, expected) => {
   const inspect = require('util').inspect;
   if (eqObjects(actual, expected)) {
@@ -9,3 +8,5 @@ const assertObjectsEqual = (actual, expected) => {
     console.log(`🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
   }
 };
+
+module.exports = assertObjectsEqual;
